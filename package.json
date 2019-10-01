@@ -2,14 +2,23 @@
   "name": "webapi",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "functions/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "netlify-lambda build express",
+    "start": "nodemon server-local.js"
   },
-  "author": "",
+  "keywords": [
+    "netlify",
+    "express.js"
+  ],
+    "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "netlify-lambda": "^1.6.3",
+    "nodemon": "^1.19.2",
+    "serverless-http": "^2.3.0",
     "sqlite3": "^4.1.0"
   }
 }
