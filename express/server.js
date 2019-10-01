@@ -38,8 +38,9 @@ router.get('/', (req, res) => {
   res.end();
 });
 router.get('/datas', (req, res) => {
-     let sql = "SELECT rowid AS id, info FROM Items"
-     return  db.allAsync(sql).then(rows => res.json(rows))
+    //  let sql = "SELECT rowid AS id, info FROM Items"
+    //  return  db.allAsync(sql).then(rows => res.json(rows))
+    res.json({test:"測試"})
 });
 
 router.post('/', (req, res) => res.json({
